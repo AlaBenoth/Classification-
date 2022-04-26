@@ -1,0 +1,12 @@
+C:\Code\GitHub\Classification-CS\Classification\bin\Debug\net6.0\Classification.deps.json
+C:\Code\GitHub\Classification-CS\Classification\bin\Debug\net6.0\Classification.dll
+C:\Code\GitHub\Classification-CS\Classification\bin\Debug\net6.0\Classification.pdb
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.csproj.AssemblyReference.cache
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.GeneratedMSBuildEditorConfig.editorconfig
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.AssemblyInfoInputs.cache
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.AssemblyInfo.cs
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.csproj.CoreCompileInputs.cache
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.dll
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\refint\Classification.dll
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\Classification.pdb
+C:\Code\GitHub\Classification-CS\Classification\obj\Debug\net6.0\ref\Classification.dll

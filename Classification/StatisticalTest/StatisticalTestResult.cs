@@ -1,49 +1,35 @@
-namespace Classification.StatisticalTest
+namespace Classification.StatisticalTest;
+
+public class StatisticalTestResult
 {
-    public class StatisticalTestResult
-    {
-        private readonly double _pValue;
-        private readonly bool _onlyTwoTailed;
+	private readonly bool onlyTwoTailed;
+	private readonly double pValue;
 
-        public StatisticalTestResult(double pValue, bool onlyTwoTailed)
-        {
-            this._pValue = pValue;
-            this._onlyTwoTailed = onlyTwoTailed;
-        }
+	public StatisticalTestResult(double pValue, bool onlyTwoTailed)
+	{
+		this.pValue = pValue;
+		this.onlyTwoTailed = onlyTwoTailed;
+	}
 
-        public StatisticalTestResultType OneTailed(double alpha)
-        {
-            if (_pValue < alpha)
-            {
-                return StatisticalTestResultType.REJECT;
-            }
+	public StatisticalTestResultType OneTailed(double alpha)
+	{
+		if (pValue < alpha)
+			return StatisticalTestResultType.Reject;
+		return StatisticalTestResultType.FailedToReject;
+	}
 
-            return StatisticalTestResultType.FAILED_TO_REJECT;
-        }
+	public StatisticalTestResultType TwoTailed(double alpha)
+	{
+		if (onlyTwoTailed)
+		{
+			if (pValue < alpha)
+				return StatisticalTestResultType.Reject;
+			return StatisticalTestResultType.FailedToReject;
+		}
+		if (pValue < alpha / 2 || pValue > 1 - alpha / 2)
+			return StatisticalTestResultType.Reject;
+		return StatisticalTestResultType.FailedToReject;
+	}
 
-        public StatisticalTestResultType TwoTailed(double alpha)
-        {
-            if (_onlyTwoTailed)
-            {
-                if (_pValue < alpha)
-                {
-                    return StatisticalTestResultType.REJECT;
-                }
-
-                return StatisticalTestResultType.FAILED_TO_REJECT;
-            }
-
-            if (_pValue < alpha / 2 || _pValue > 1 - alpha / 2)
-            {
-                return StatisticalTestResultType.REJECT;
-            }
-
-            return StatisticalTestResultType.FAILED_TO_REJECT;
-        }
-
-        public double GetPValue()
-        {
-            return _pValue;
-        }
-    }
+	public double GetPValue() => pValue;
 }

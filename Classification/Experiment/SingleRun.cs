@@ -1,7 +1,6 @@
-namespace Classification.Experiment
+namespace Classification.Experiment;
+
+public interface SingleRun
 {
-    public interface SingleRun
-    {
-        Performance.Performance Execute(Experiment experiment);
-    }
+	Performance.Performance Execute(Experiment experiment);
 }

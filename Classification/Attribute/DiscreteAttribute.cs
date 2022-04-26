@@ -1,55 +1,30 @@
-using System.Collections.Generic;
+namespace Classification.Attribute;
 
-namespace Classification.Attribute
+public class DiscreteAttribute : Attribute
 {
-    public class DiscreteAttribute : Attribute
-    {
-        private readonly string _value;
+	private readonly string value;
 
-        /**
-         * <summary>Constructor for a discrete attribute.</summary>
-         *
-         * <param name="value">Value of the attribute.</param>
-         */
-        public DiscreteAttribute(string value)
-        {
-            this._value = value;
-        }
+	/**
+	 * <summary>Constructor for a discrete attribute.</summary>
+	 * <param name="value">Value of the attribute.</param>
+	 */
+	public DiscreteAttribute(string value) => this.value = value;
 
-        /**
-         * <summary>Accessor method for value.</summary>
-         *
-         * <returns>value</returns>
-         */
-        public string GetValue()
-        {
-            return _value;
-        }
+	/**
+	 * <summary>Accessor method for value.</summary>
+	 * <returns>value</returns>
+	 */
+	public string GetValue() => value;
 
-        /**
-         * <summary>Converts value to {@link string}.</summary>
-         *
-         * <returns>string representation of value.</returns>
-         */
-        public override string ToString()
-        {
-            if (_value == ",")
-            {
-                return "comma";
-            }
+	/**
+	 * <summary>Converts value to {@link string}.</summary>
+	 * <returns>string representation of value.</returns>
+	 */
+	public override string ToString() =>
+		value == ","
+			? "comma"
+			: value;
 
-            return _value;
-        }
-
-
-        public override int ContinuousAttributeSize()
-        {
-            return 0;
-        }
-
-        public override List<double> ContinuousAttributes()
-        {
-            return new List<double>();
-        }
-    }
+	public override int ContinuousAttributeSize() => 0;
+	public override List<double> ContinuousAttributes() => new List<double>();
 }

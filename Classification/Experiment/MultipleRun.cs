@@ -1,9 +1,8 @@
 using Classification.Performance;
 
-namespace Classification.Experiment
+namespace Classification.Experiment;
+
+public interface MultipleRun
 {
-    public interface MultipleRun
-    {
-        ExperimentPerformance Execute(Experiment experiment);
-    }
+	ExperimentPerformance Execute(Experiment experiment);
 }

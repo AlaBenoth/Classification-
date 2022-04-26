@@ -1,25 +1,22 @@
-namespace Classification.Attribute
+namespace Classification.Attribute;
+
+public enum AttributeType
 {
-    public enum AttributeType
-    {
-        /**
+	/**
          * Continuous Attribute
          */
-        CONTINUOUS,
-
-        /**
+	// ReSharper disable InconsistentNaming
+	CONTINUOUS,
+	/**
          * Discrete Attribute
          */
-        DISCRETE,
-
-        /**
+	DISCRETE,
+	/**
          * Binary Attribute
          */
-        BINARY,
-
-        /**
+	BINARY,
+	/**
          * Discrete Indexed Attribute is used to store the indices.
          */
-        DISCRETE_INDEXED
-    }
+	DISCRETE_INDEXED
 }

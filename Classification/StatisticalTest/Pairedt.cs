@@ -3,7 +3,7 @@ using Math;
 
 namespace Classification.StatisticalTest
 {
-    public class Pairedt : PairedTest
+    public class Pairedt : PairedTests
     {
         private double TestStatistic(ExperimentPerformance classifier1, ExperimentPerformance classifier2)
         {
